@@ -1,0 +1,251 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+/*=====================================*/
+              /*nav beg*/
+.navbar{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav1{
+    flex-basis: 50%;
+    max-height: 75px;
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+}
+.settings-container{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.sett1{
+    display: flex;
+    margin: 5px;
+}
+.sett1 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+.sett1 button{
+    width: 20px;
+    height: 20px;
+    border: transparent;
+    background-color: transparent;
+    align-self: center;
+    cursor: pointer;
+}
+.sett2{
+    display: flex;
+    margin: 5px;
+}
+.sett2 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+.sett2 button{
+    width: 20px;
+    height: 20px;
+    border: transparent;
+    background-color: transparent;
+    align-self: center;
+    cursor: pointer;
+}
+#settings{
+    justify-self: flex-end;
+    align-self: center;
+    margin-right: 10px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav1 .title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+}
+.title span{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 2px;
+    transition: .3s;
+}
+.title span:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.nav2{
+    flex-basis: 50%;
+    max-height: 75px;
+    align-items: center;
+    display: flex;
+    background-color:#05C7F2 ;
+}
+
+.nav2 h2{
+    flex-basis: 10%;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 15px;
+    font-size: 1.8rem;
+}
+.input-holder{
+    flex-basis: 90%;
+    margin: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.input-holder input{
+    width: 90%;
+    border: transparent;
+    height: 50%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.search{
+    height: 20px;
+    width: 20px;
+    border: transparent;
+    background: transparent;
+    margin: 5px;
+    cursor: pointer;
+}
+.search i{
+    color: black;
+    font-size: 1.5rem;
+}
+              /*nav end*/
+/*====================================*/
+
+.main-content{
+
+height: 80vh;  
+overflow: hidden; 
+display: grid;
+}
+
+
+.weather-widget{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 0 7px black;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top: 10%;
+    transition: .4s;
+}
+
+.widget-title{
+    background-image: linear-gradient(135deg, #ffab19 15%, #f06400 83%); 
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.widget-title h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+.widget-title .icon{
+    margin: 15px;
+}
+
+.img-weather{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+.widget-info{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.main-desc{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.main-desc img{
+    margin: 5px;
+}
+.main-desc p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.second-desc{
+    text-align: center;
+}
+.second-desc h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 2px;
+}
+.second-desc p{
+    margin-bottom: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.icon2{
+    width: 40px;
+    height: 40px;
+}
+.min-max{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.widget-forecast{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.widget-forecast div{
+    margin: 5px;
+    margin-top:5px;
+}
+.forecast2 p{
+    margin: 5px;
+}
+
+
+
+
+
+.footer{
+    background-color: blueviolet;
+    height: 150px;
+}
