@@ -242,6 +242,21 @@ display: grid;
 }
 
 
+/*=====================================================*/
+
+.observations1{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.icon-sun{
+width: 40px;
+height: 40px;
+}
+
+
 
 
 
