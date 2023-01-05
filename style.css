@@ -142,7 +142,7 @@
 
 .main-content{
 
-height: 80vh;  
+height: 100vh;  
 overflow: hidden; 
 display: grid;
 }
@@ -245,6 +245,7 @@ display: grid;
 /*=====================================================*/
 
 .observations1{
+    margin: 20px;
     display: flex;
     padding: 10px;
     justify-content: space-around;
@@ -252,11 +253,27 @@ display: grid;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .icon-sun{
-width: 40px;
-height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
+.observations-2-2{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid black;
+}
 
+.observations-2-2 div{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+.icon-obs{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
 
 
 
