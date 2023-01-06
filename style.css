@@ -268,7 +268,8 @@ display: grid;
 .observations-2-2{
     display: flex;
     padding: 10px;
-    margin: 10px;
+    margin: 30px;
+    margin-bottom: 100px;
     border-bottom: 1px solid black;
     box-shadow: 0 0 5px gray;
     max-width: 800px;
@@ -280,7 +281,8 @@ display: grid;
 }
 
 .observations-2-2 div{
-    margin: 20px;
+    height: 50px;
+    padding: 15px;
     display: flex;
     align-items: center;
 }
@@ -291,8 +293,56 @@ display: grid;
 
 
 .footer{
-    background-color:#4C4C4C;
+
+    font-size: .9rem;
+    background-color:#3d3d3d;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     padding: 20px;
 }
+.footer div{
+    padding: 10px;
+    border-bottom: 1px white solid;
+}
+.footer p{
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: wheat;
+    margin: 20px;
+}
+
+body{
+    animation: fadeIn 2s;
+    }
+    
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
+
+    p{animation: rotating .5s}
+
+    @keyframes rotating {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .rotating-element {
+        animation: rotating 2s ease-out;
+      }
+
+    
+    
+    
