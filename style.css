@@ -325,7 +325,10 @@ display: grid;
     margin-bottom: 100px;
     border-bottom: 1px solid black;
     box-shadow: 0 0 5px gray;
-    max-width: 800px;
+    width: fit-content;
+}
+.observations-2-2 div{
+    margin: 20px;
 }
 .wolf{
     align-self: center;
