@@ -6,12 +6,39 @@ const settings = document.getElementById('settings');
 const units = document.getElementById('units-btn');
 const lang = document.getElementById('lang-btn');
 const widgetTemp = document.querySelector('.widget-temp');
-const widgetWind = document.querySelector('.widget-wind')
-
-
+const widgetWind = document.querySelector('.widget-wind');
+const langParam = document.querySelector('.lang-param');
+const unitsParam = document.querySelector('.units-param');
+var unitstate = 'standard'
+var langstate = 'eng'
+var unitsButtonState = 'down'
+var langButtonState = 'down'
 //event listeners 
 search.addEventListener('click',loaddata);
 window.addEventListener('load',bodyData);
+units.addEventListener('click',function(){
+if(unitsButtonState==='down'){
+  unitsParam.classList.add('show');
+  units.classList.add('flip-upside-down');
+  unitsButtonState = 'up'
+}else{
+  unitsParam.classList.remove('show');
+  units.classList.remove('flip-upside-down');
+  unitsButtonState = 'down'
+}
+} )
+///////////////////////////////////////////////////
+lang.addEventListener('click',function(){
+  if(langButtonState==='down'){
+    langParam.classList.add('show');
+    lang.classList.add('flip-upside-down');
+    langButtonState = 'up'
+  }else{
+    langParam.classList.remove('show');
+    lang.classList.remove('flip-upside-down');
+    langButtonState = 'down'
+  }
+  } )
 
 
 
