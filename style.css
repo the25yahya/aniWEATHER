@@ -141,8 +141,8 @@
 /*====================================*/
 
 .main-content{
-
-height: 100vh;  
+background-color:rgb(255, 255, 243);
+height: fit-content;  
 overflow: hidden; 
 display: grid;
 }
@@ -256,12 +256,27 @@ display: grid;
     width: 40px;
     height: 40px;
 }
-
+.observations2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.observations2 p{
+    margin-left: 20px;
+}
+.observations2 h2{
+    margin-left: 5px;
+}
 .observations-2-2{
     display: flex;
     padding: 10px;
     margin: 10px;
     border-bottom: 1px solid black;
+    box-shadow: 0 0 5px gray;
+    max-width: 800px;
+}
+.wolf{
+    align-self: center;
+    justify-self: flex-end;
+    margin-left: 80px;
 }
 
 .observations-2-2 div{
@@ -270,14 +285,14 @@ display: grid;
     align-items: center;
 }
 .icon-obs{
-    margin-right: 10px;
     width: 30px;
     height: 30px;
 }
 
 
-
 .footer{
-    background-color: blueviolet;
-    height: 150px;
+    background-color:#4C4C4C;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 20px;
 }
