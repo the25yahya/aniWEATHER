@@ -17,6 +17,7 @@
 }
 
 .nav1{
+    animation: slideInFromLeft 1s ease-in;
     flex-basis: 50%;
     max-height: 75px;
     display: flex;
@@ -150,6 +151,7 @@
     margin-left: 10px;
 }
 .nav2{
+    animation: slideInFromRight 1s ease-in;
     flex-basis: 50%;
     max-height: 75px;
     align-items: center;
@@ -424,7 +426,27 @@ body{
         animation: rotating 2s ease-out;
       }
 
-    
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInFromRight {
+        0% {
+          transform: translateY(+100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+
+
+
     /*================================================*/
     .show{
         display: block;

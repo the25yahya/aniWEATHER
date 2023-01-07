@@ -1,4 +1,5 @@
 //variables 
+const feelsLike = document.querySelectorAll('.feels-like');
 const forecastDate = document.querySelectorAll('.forecast-date');
 const max = document.querySelectorAll('.max');
 const min = document.querySelectorAll('.min');
@@ -162,7 +163,13 @@ let updatedDate6 = hours8 + ':' + minutes8+'0'
   });
 
 
-
+  const feelsLikeArray = [data.list[0].main.feels_like,data.list[1].main.feels_like,data.list[2].main.feels_like,data.list[3].main.feels_like,data.list[4].main.feels_like,data.list[5].main.feels_like];
+  console.log(feelsLikeArray);
+  feelsLike.forEach(function(element,index){
+    if(index<feelsLikeArray.length){
+      element.innerHTML ='FL '+feelsLikeArray[index]+'°c';
+    }
+  })
 
   })
 
