@@ -1,4 +1,6 @@
 //variables 
+const max = document.querySelectorAll('.max');
+const min = document.querySelectorAll('.min');
 const maindesc = document.getElementById('widget-desc-info');
 const sunset = document.getElementById('sunset-info');
 const sunrise = document.getElementById('sunrise-info');
@@ -66,41 +68,41 @@ function bodyData(){
     let sunriseDate = new Date(sunrisemiliseconds);
     let hours = sunriseDate.getHours();
     let minutes = sunriseDate.getMinutes();
-    let time_string = hours + ':' + minutes;
-    if(minutes<10){
-      time_string += minutes;
-    }
-    if (hours >= 12){
-      time_string += " PM";
-    }else{
-      time_string += " AM"
-    }
+    let time_string = hours + ':' + minutes + ' AM';
     sunrise.innerHTML=time_string;
     let sunsetmiliseconds = data.sys.sunset;
     console.log(sunsetmiliseconds)
     let sunsetDate = new Date(sunsetmiliseconds);
     let hours2 = sunriseDate.getHours();
     let minutes2 = sunriseDate.getMinutes();
-    let time_string2 = hours2 + ':' + minutes2;
-    if(minutes2<10){
-      time_string2 += minutes2;
-    }
-    if (hours2 >= 12){
-      time_string2 += " PM";
-    }else{
-      time_string2 += " AM"
-    }
+    let time_string2 = hours2 + ':' + minutes2 + ' PM';
+
      sunset.innerHTML=time_string2;
+
+  })
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=london&units=metric&appid=98eb5417a82ab57df380d08e9d87372d`)
+  .then(response => response.json())
+  .then(function(data) {
+    console.log(data);
+    const arraymax = [data.list[0].main.temp_max,data.list[1].main.temp_max,data.list[2].main.temp_max,data.list[3].main.temp_max,data.list[4].main.temp_max,data.list[5].main.temp_max]
+    console.log(arraymax);
+    max.forEach((element,index) => {
+      if (index < arraymax.length) {
+        element.innerHTML = arraymax[index] + '°c';
+      }
+    });
+
+
+    const arraymin = [data.list[0].main.temp_min,data.list[1].main.temp_min,data.list[2].main.temp_min,data.list[3].main.temp_min,data.list[4].main.temp_min,data.list[5].main.temp_min]
+    console.log(arraymin);
+    min.forEach((element,index) => {
+      if (index < arraymin.length) {
+        element.innerHTML = arraymin[index] + '°c';
+      }
+    });
 
 
   })
-
-
-
-
-  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=london&units=metric&appid=98eb5417a82ab57df380d08e9d87372d`)
-  .then(response => response.json())
-  .then(data => console.log(data))
 
 }
 
