@@ -204,7 +204,7 @@ display: grid;
 .weather-widget{
     display: flex;
     flex-direction: column;
-    min-width: 500px;
+    min-width: fit-content;
     width: 700px;
     border-radius: 8px;
     box-shadow: 0 0 7px black;
@@ -293,7 +293,17 @@ display: grid;
 .forecast2 p{
     margin: 5px;
 }
+.forecast2{
+    display: flex;
+    flex-direction: column;
+}
+.forecast2 div{
+    display: flex;
+}
 
+.forecast2 div img{
+    margin-top: 5px;
+}
 
 /*=====================================================*/
 
