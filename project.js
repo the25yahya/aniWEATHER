@@ -1,4 +1,5 @@
 //variables 
+const forecastDate = document.querySelectorAll('.forecast-date');
 const max = document.querySelectorAll('.max');
 const min = document.querySelectorAll('.min');
 const maindesc = document.getElementById('widget-desc-info');
@@ -85,7 +86,6 @@ function bodyData(){
   .then(function(data) {
     console.log(data);
     const arraymax = [data.list[0].main.temp_max,data.list[1].main.temp_max,data.list[2].main.temp_max,data.list[3].main.temp_max,data.list[4].main.temp_max,data.list[5].main.temp_max]
-    console.log(arraymax);
     max.forEach((element,index) => {
       if (index < arraymax.length) {
         element.innerHTML = arraymax[index] + '°c';
@@ -94,12 +94,74 @@ function bodyData(){
 
 
     const arraymin = [data.list[0].main.temp_min,data.list[1].main.temp_min,data.list[2].main.temp_min,data.list[3].main.temp_min,data.list[4].main.temp_min,data.list[5].main.temp_min]
-    console.log(arraymin);
     min.forEach((element,index) => {
       if (index < arraymin.length) {
         element.innerHTML = arraymin[index] + '°c';
       }
     });
+////////////////////////////////////////////////////////
+                     //date of forecast
+    const datearray1 = data.list[0].dt_txt;
+    const date1 = new Date(datearray1);
+    let hours3 = date1.getHours();
+    let minutes3 = date1.getMinutes();
+
+    let updatedDate1= hours3 + ':' + minutes3+'0'
+/////////////////////////////////////////////////////
+
+    const datearray2 = data.list[1].dt_txt;
+    const date2 = new Date(datearray2);
+    let hours4 = date2.getHours();
+    let minutes4 = date2.getMinutes();
+
+    let updatedDate2 = hours4 + ':' + minutes4+'0'
+///////////////////////////////////////////////////////
+
+    const datearray3 = data.list[2].dt_txt;
+    const date3 = new Date(datearray3);
+    let hours5 = date3.getHours();
+    let minutes5 = date3.getMinutes();
+
+    let updatedDate3 = hours5 + ':' + minutes5+'0'
+///////////////////////////////////////////////////////
+
+
+    const datearray4 = data.list[3].dt_txt;
+    const date4 = new Date(datearray4);
+    let hours6 = date4.getHours();
+    let minutes6 = date4.getMinutes();
+
+    let updatedDate4 = hours6 + ':' + minutes6+'0'
+////////////////////////////////////////////////////////
+
+
+const datearray5 = data.list[4].dt_txt;
+const date5 = new Date(datearray5);
+let hours7 = date5.getHours();
+let minutes7 = date5.getMinutes();
+
+let updatedDate5 = hours7 + ':' + minutes7+'0'
+///////////////////////////////////////////////////////
+
+
+const datearray6 = data.list[5].dt_txt;
+const date6 = new Date(datearray6);
+let hours8 = date6.getHours();
+let minutes8 = date6.getMinutes();
+
+let updatedDate6 = hours8 + ':' + minutes8+'0'  
+                 //////////////////////
+
+  let arrayOfUpdatedDates = [updatedDate1,updatedDate2,updatedDate3,updatedDate4,updatedDate5,updatedDate6]               
+   console.log(arrayOfUpdatedDates);
+
+   forecastDate.forEach((element,index) => {
+    if (index < arrayOfUpdatedDates.length) {
+      element.innerHTML = arrayOfUpdatedDates[index];
+    }
+  });
+
+
 
 
   })

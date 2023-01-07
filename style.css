@@ -202,10 +202,9 @@ display: grid;
 
 
 .weather-widget{
+    width: 1000px;
     display: flex;
     flex-direction: column;
-    min-width: fit-content;
-    width: 700px;
     border-radius: 8px;
     box-shadow: 0 0 7px black;
     justify-self: center;
@@ -242,10 +241,15 @@ display: grid;
     display: grid;
     grid-template-columns: 30% 70%;
 }
+.widget-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 .main-desc{
     display: flex;
     align-items: center;
-    padding: 10px;
 }
 
 .main-desc img{
@@ -286,9 +290,13 @@ display: grid;
     display: grid;
     grid-template-columns: repeat(6,1fr);
 }
-.widget-forecast div{
-    margin: 5px;
+.day{
+    margin: 20px;
     margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .forecast2 p{
     margin: 5px;
@@ -303,6 +311,9 @@ display: grid;
 
 .forecast2 div img{
     margin-top: 5px;
+}
+.forecast-date{
+    margin: 5px;
 }
 
 /*=====================================================*/
