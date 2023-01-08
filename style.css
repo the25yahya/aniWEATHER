@@ -196,15 +196,16 @@
 /*====================================*/
 
 .main-content{
-background-color:rgb(255, 255, 243);
-height: fit-content;  
-overflow: hidden; 
-display: grid;
+    animation: slideInFromBottom 1s ease-in-out;
+    background-color:rgb(255, 255, 243);
+    height: fit-content;  
+    overflow: hidden; 
+    display: grid;
 }
 
 
 .weather-widget{
-    width: 1000px;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -240,6 +241,7 @@ display: grid;
 
 
 .widget-info{
+    padding: 10px;
     display: grid;
     grid-template-columns: 30% 70%;
 }
@@ -444,6 +446,15 @@ body{
         }
       }
 
+      @keyframes slideInFromBottom {
+        from {
+        bottom: -100%;
+        }
+        to {
+        bottom: 0;
+        }
+        }
+
 
 
 
@@ -456,3 +467,6 @@ body{
         transform: scaleY(-1);
         margin-top: 8px;
       }
+.clicked{
+    color: aqua;
+}
