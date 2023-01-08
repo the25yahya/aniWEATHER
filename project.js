@@ -297,7 +297,13 @@ function loaddata(){
     .then(response => response.json())
     .then(function(data){
       if(unitstate==='metric'){
-
+        const forecastWeatherDesc = [data.list[0].weather[0].description,data.list[1].weather[0].description,data.list[2].weather[0].description,data.list[3].weather[0].description,data.list[4].weather[0].description,data.list[5].weather[0].description];
+        console.log(forecastWeatherDesc);
+           imgForecast.forEach(function(element,index){
+            if(index<forecastWeatherDesc.length){
+              element.src=`imgs/${forecastWeatherDesc[index]}.png`
+            }
+           }); 
         const arraymax = [data.list[0].main.temp_max,data.list[1].main.temp_max,data.list[2].main.temp_max,data.list[3].main.temp_max,data.list[4].main.temp_max,data.list[5].main.temp_max]
         max.forEach((element,index) => {
           if (index < arraymax.length) {
@@ -382,6 +388,16 @@ function loaddata(){
       })
 
       }else{
+
+
+
+        const forecastWeatherDesc = [data.list[0].weather[0].description,data.list[1].weather[0].description,data.list[2].weather[0].description,data.list[3].weather[0].description,data.list[4].weather[0].description,data.list[5].weather[0].description];
+        console.log(forecastWeatherDesc);
+           imgForecast.forEach(function(element,index){
+            if(index<forecastWeatherDesc.length){
+              element.src=`imgs/${forecastWeatherDesc[index]}.png`
+            }
+           });
 
         const arraymax = [data.list[0].main.temp_max,data.list[1].main.temp_max,data.list[2].main.temp_max,data.list[3].main.temp_max,data.list[4].main.temp_max,data.list[5].main.temp_max]
         max.forEach((element,index) => {
