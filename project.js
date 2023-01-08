@@ -1,4 +1,6 @@
 //variables 
+const imgWeather = document.querySelector('.img-weather')
+const imgForecast = document.querySelectorAll('.img-forecast');
 const cityname = document.getElementById('city-name');
 const feelsLike = document.querySelectorAll('.feels-like');
 const forecastDate = document.querySelectorAll('.forecast-date');
@@ -129,6 +131,7 @@ function bodyData(){
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=london&cnt=20&units=metric&appid=98eb5417a82ab57df380d08e9d87372d`)
   .then(response => response.json())
   .then(function(data){
+    imgWeather.src = `imgs/${data.weather[0].description}.png`
     console.log(data);
     widgetTemp.innerText= data.main.temp+'°c';
     widgetWind.innerText = 'wind : '+ data.wind.speed + 'm/s'
@@ -155,6 +158,15 @@ function bodyData(){
   .then(response => response.json())
   .then(function(data) {
     console.log(data);
+
+    const forecastWeatherDesc = [data.list[0].weather[0].description,data.list[1].weather[0].description,data.list[2].weather[0].description,data.list[3].weather[0].description,data.list[4].weather[0].description,data.list[5].weather[0].description];
+    console.log(forecastWeatherDesc);
+       imgForecast.forEach(function(element,index){
+        if(index<forecastWeatherDesc.length){
+          element.src=`imgs/${forecastWeatherDesc[index]}.png`
+        }
+       });
+
     const arraymax = [data.list[0].main.temp_max,data.list[1].main.temp_max,data.list[2].main.temp_max,data.list[3].main.temp_max,data.list[4].main.temp_max,data.list[5].main.temp_max]
     max.forEach((element,index) => {
       if (index < arraymax.length) {
@@ -248,6 +260,10 @@ function loaddata(){
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&cnt=20&units=${unitstate}&lang=${langstate}&appid=98eb5417a82ab57df380d08e9d87372d`)
     .then(response => response.json())
     .then(function(data){
+
+      imgWeather.src = `imgs/${data.weather[0].description}.png`
+
+
       cityname.innerHTML=value
       console.log(data);
       widgetWind.innerText = 'wind : '+ data.wind.speed + 'm/s'
