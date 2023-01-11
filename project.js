@@ -256,6 +256,7 @@ let updatedDate6 = hours8 + ':' + minutes8+'0'
 
 function loaddata(){
   let value = input.value;
+  unitstate = 'metric'
   if(value){
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&cnt=20&units=${unitstate}&lang=${langstate}&appid=98eb5417a82ab57df380d08e9d87372d`)
     .then(response => response.json())
